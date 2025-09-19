@@ -1,0 +1,104 @@
+
+<Layouts.flash_group flash={@flash} />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsabilidad Social</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      border: 1px solid #333;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .box{
+      width: 170px;
+      height : auto;
+      margin: 0 auto;
+      border: 1px solid #333;
+      padding: 20px;
+    }
+    .main-data{
+      display: flex; 
+      justify-content: space-around; 
+      gap: 20px;
+    }
+    
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .arrow {
+      font-size: 24px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div id="div" phx-hook="LocalStorageCheker">
+      <h1><%= @task.desafio %></h1>
+
+      <div class="main-data">
+        <div class="info" id="valores">
+          <h2>Valores</h2>
+          <p class="box"><%= @task.valor1 %></p><br>
+          <p class="box"><%= @task.valor2 %></p><br>
+          <p class="box"><%= @task.valor3 %></p><br>
+        </div>
+
+        <div class="info" id="novalores">
+          <h2>No Valores</h2>
+          <p class="box"><%= @task.novalor1 %></p><br>
+          <p class="box"><%= @task.novalor2 %></p><br>
+          <p class="box"><%= @task.novalor3 %></p><br>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+</body>
+
+
+</html>
