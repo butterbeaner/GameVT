@@ -7,13 +7,5 @@ defmodule Test.ValoresFixtures do
   @doc """
   Generate a valor.
   """
-  def valor_fixture(scope, attrs \\ %{}) do
-    attrs =
-      Enum.into(attrs, %{
-        desc: "some desc"
-      })
 
-    {:ok, valor} = Test.Valores.create_valor(scope, attrs)
-    valor
-  end
 end

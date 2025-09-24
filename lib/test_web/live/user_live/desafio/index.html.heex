@@ -18,7 +18,7 @@
     
 
     .container {
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
       border: 1px solid #333;
       padding: 20px;
@@ -81,16 +81,17 @@
       <div class="main-data">
         <div class="info" id="valores">
           <h2>Valores</h2>
-          <p class="box"><%= @task.valor1 %></p><br>
-          <p class="box"><%= @task.valor2 %></p><br>
-          <p class="box"><%= @task.valor3 %></p><br>
+          <p class="box"><%= Enum.at(@task.valores, 0) %></p><br>
+          <p class="box"><%= Enum.at(@task.valores, 1) %></p><br>
+          <p class="box"><%= Enum.at(@task.valores, 2) %></p><br>
         </div>
 
         <div class="info" id="novalores">
           <h2>No Valores</h2>
-          <p class="box"><%= @task.novalor1 %></p><br>
-          <p class="box"><%= @task.novalor2 %></p><br>
-          <p class="box"><%= @task.novalor3 %></p><br>
+          <p class="box"><%= Enum.at(@task.novalores, 0) %></p><br>
+          <p class="box"><%= Enum.at(@task.novalores, 1) %></p><br>
+          <p class="box"><%= Enum.at(@task.novalores, 2) %></p><br>
+
         </div>
       </div>
     </div>
