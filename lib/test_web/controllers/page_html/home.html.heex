@@ -5,83 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsabilidad Social</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="/css/taildwind.css">
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      border: 1px solid #333;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .info{
-      justify-content: space-between;
-    }
-
-    .button-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .arrow {
-      font-size: 24px;
-      margin-top: 5px;
-    }
-  </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Responsabilidad Social<br>Cooperativa / Mutual<br>Trabajemos con:</h1>
-
-  <img src={~p"/static/images/villatristeza.png"} alt=""/>
-
-    <div class="button-row">
-      <div class="button" onclick="instrucciones()">
-        <.link navigate={~p"/instrucciones"} class="button">
-        Instrucciones
-        </.link>
+  <div>
+    <section class="relative bg-teal-900 bg-cover h-[100vh]" x-data="{ mobileNavOpen: false }"><img class="absolute top-0 left-0 w-full h-full" src="/images/villatristeza.png" alt=""/>
+      <nav class="py-6">
+        <div class="container mx-auto px-4">
+          <div class="relative flex items-center justify-between"><a class="inline-block" href="#!"><img class="h-8" src="images/logo-white.svg" alt=""/></a>
+            <ul class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
+              <li class="mr-8"><a class="inline-block text-white hover:text-lime-500 font-medium" href={~p"/instrucciones"}>Instrucciones</a></li>
+              <li class="mr-8"><a class="inline-block text-white hover:text-lime-500 font-medium" href={~p"/desafio"}>Desafio</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="relative pt-18 pb-24 sm:pb-32 lg:pt-36 lg:pb-62">
+        <div class="container mx-auto px-4 relative">
+          <div class="max-w-lg xl:max-w-xl mx-auto text-center">
+            <h1 class="font-heading text-5xl xs:text-7xl xl:text-8xl tracking-tight text-white mb-8">Villa Tristeza</h1>
+            <p class="max-w-md xl:max-w-none text-lg text-white opacity-80 mb-10">Responsabilidad Social Cooperativa / Mutual</p><a class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-teal-900 border border-lime-500 hover:border-white bg-lime-500 hover:bg-white rounded-full transition duration-200" href={~p"/instrucciones"}>Instrucciones</a>
+          </div>
+        </div>
       </div>
-
-      <div class="button" phx-click="redirect_to_desafios">
-
-        <.link navigate={~p"/desafio"} class="button">
-        Generar Desafío
-        </.link>
-      </div>
-
       
-    </div>
+    </section>
   </div>
-
-
 </body>
 
 
