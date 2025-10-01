@@ -10,7 +10,7 @@ export default LocalStorageChecker = {
       if (desafio && valores && novalores) {
 
         this.pushEvent("desafio_from_local_storage", {
-          desafio: desafio.split(","),
+          desafio: desafio,
           valores: valores.split(","),
           novalores: novalores.split(",")
         });

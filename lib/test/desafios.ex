@@ -11,6 +11,8 @@ defmodule Test.Desafios do
   def random_desafio() do
     %{desc: desc} = list_desafios()
     |> Enum.random()
+#    |> Enum.at(0)
+#    IO.puts(desc)
     desc
   end
 end
