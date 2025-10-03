@@ -5,6 +5,8 @@ defmodule Test.Repo.Migrations.CreateNovalores do
     create table(:novalores) do
       add :desc, :text
       add :user_id, references(:users, type: :id, on_delete: :delete_all)
+      timestamps(default: fragment("NOW()"))
+
 
     end
 
