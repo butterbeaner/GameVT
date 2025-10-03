@@ -6,6 +6,7 @@ defmodule Test.Novalores.Novalor do
     field :desc, :string
   end
 
+
   @doc false
   def changeset(novalor, attrs) do
     novalor
