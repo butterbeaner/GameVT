@@ -19,7 +19,6 @@ defmodule TestWeb.UserLive.Desafio.Index do
   def handle_event("no_desafio_in_local_storage", _params, socket) do
     valores = Valores.random_valor()
     novalores = Novalores.random_novalor()
-
     task = %{
       desafio: Desafios.random_desafio(),
       valores: valores,

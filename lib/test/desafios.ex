@@ -11,10 +11,12 @@ defmodule Test.Desafios do
   end
 
   def list_desafios() do
+
     Repo.all(Desafio)
   end
 
   def random_desafio() do
+    IO.puts("function called")
     %{desc: desc} = list_desafios()
     |> Enum.random()
 #    |> Enum.at(0)
